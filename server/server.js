@@ -29,9 +29,4 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!')
 })
 
-if(process.env.NODE_ENV !== "production"){
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
-}
-
-//Export server for Versel
-export default server;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
